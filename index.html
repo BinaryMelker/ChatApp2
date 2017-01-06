@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>chatApp2</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--google info for my app-->
+    <meta name="google-signin-client_id" content="292300326763-h61st2j3adrpch4dl7gms213b7mom1k4.apps.googleusercontent.com">
+    <link rel="stylesheet" href="/styles.css" />
+    <base href="/">
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+
+    <!-- 3. google sign-in-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- Google sign-in script -->
+    <script>
+        gapi.load('auth2',function () {
+            gapi.auth2.init();
+        });
+    </script>
+
+
+    <script>
+      //Client Code(Angular2)
+       System.import('client').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+  <!-- 3. Display the application -->
+  <body>
+
+    <!-- Google login btn and signout -->
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <a href="#" onclick="signOut();">Sign out</a>
+
+    <!-- App -->
+    <sd-app>Loading...</sd-app>
+  </body>
+</html>
