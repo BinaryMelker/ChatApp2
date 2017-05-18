@@ -17,11 +17,13 @@ var core_2 = require("@angular/core");
 /// <reference path="../../typings/globals/jquery/index.d.ts/>
 require("/socket.io/socket.io.js");
 var NickNameComponent = (function () {
+    //ngZone: NgZone;
     function NickNameComponent(router, ngZone) {
         var _this = this;
         this.nickname = null;
         this.router = router;
-        // Google signin stuff.
+        //this.ngZone = ngZone;
+        // Google sign-in stuff.
         window['onSignIn'] = function (user) { return ngZone.run(function () { return _this.onSignIn(user); }); };
     }
     NickNameComponent.prototype.submit = function (data) {

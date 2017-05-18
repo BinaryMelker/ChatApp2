@@ -1,14 +1,16 @@
 
-
+<!-- Note for user -->
 <div id="note">
 	<h2>
 		Please sign in to Google to chat!
 	</h2>
-
-
 </div>
 
+<!-- Googel button -->
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<a href="#" onclick="signOut();">Sign out</a>
 
+<!-- Nick name part -->
 <div id="divID">
 	<input  #nickname placeholder="Nickname" (keyup)="addNickname($event, nickname)" autocomplete="off" autofocus value="" required>
 	<button (click)="submit(nickname)">Submit</button>

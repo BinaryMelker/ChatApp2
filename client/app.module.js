@@ -21,7 +21,15 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, app_routing_2.routing, router_1.RouterModule, router_1.RouterModule.forRoot(app_routing_1.appRoutes), index_1.NickNameModule, index_2.ChatModule],
+        imports: [
+            platform_browser_1.BrowserModule,
+            forms_1.FormsModule,
+            app_routing_2.routing,
+            router_1.RouterModule,
+            router_1.RouterModule.forRoot(app_routing_1.appRoutes),
+            index_1.NickNameModule,
+            index_2.ChatModule
+        ],
         declarations: [app_component_1.AppComponent],
         providers: [app_routing_2.appRoutingProviders],
         bootstrap: [app_component_1.AppComponent]

@@ -21,13 +21,24 @@
     <script src="socket.io/socket.io.js"></script>
 
     <!-- 3. google sign-in-->
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <!-- Google sign-in script -->
+    <!--<script src="https://apis.google.com/js/platform.js" async defer></script>-->
+
+    <script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
     <script>
+        window.onLoadCallback = function(){
+            gapi.auth2.init({
+                client_id: 'filler_text_for_client_id.apps.googleusercontent.com'
+            });
+        }
+    </script>
+
+
+    <!-- Google sign-in script -->
+   <!-- <script>
         gapi.load('auth2',function () {
             gapi.auth2.init();
         });
-    </script>
+    </script>-->
 
 
     <script>
@@ -37,11 +48,6 @@
   </head>
   <!-- 3. Display the application -->
   <body>
-
-    <!-- Google login btn and signout -->
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <a href="#" onclick="signOut();">Sign out</a>
-
     <!-- App -->
     <sd-app>Loading...</sd-app>
   </body>

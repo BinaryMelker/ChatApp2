@@ -14,7 +14,15 @@ import { ChatModule }  from "./chat-component/index";
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, routing, RouterModule, RouterModule.forRoot(appRoutes), NickNameModule, ChatModule],
+  imports:      [ 
+    BrowserModule, 
+    FormsModule, 
+    routing, 
+    RouterModule, 
+    RouterModule.forRoot(appRoutes), 
+    NickNameModule, 
+    ChatModule
+    ],
   declarations: [ AppComponent ],
   providers: 	[ appRoutingProviders ],
   bootstrap:    [ AppComponent ]

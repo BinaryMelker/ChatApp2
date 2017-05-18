@@ -22,10 +22,12 @@ import "/socket.io/socket.io.js";
 export class NickNameComponent {
     nickname: string = null;
     protected router;
+    //ngZone: NgZone;
 
     constructor( @Inject(Router) router: Router, ngZone: NgZone) {
         this.router = router;
-        // Google signin stuff.
+        //this.ngZone = ngZone;
+        // Google sign-in stuff.
         window['onSignIn'] = (user) => ngZone.run(() => this.onSignIn(user));
     }
 
