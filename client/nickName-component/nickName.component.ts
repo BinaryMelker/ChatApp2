@@ -18,7 +18,6 @@ import "/socket.io/socket.io.js";
     selector: "nick-name",
     templateUrl: "nickName.component.html"
 })
-
 export class NickNameComponent {
     nickname: string = null;
     protected router;
